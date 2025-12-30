@@ -1,0 +1,180 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    line-height: 1.6;
+    background: #f4f1ec;
+    color: #333;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 80vh;
+    background: #6b3f25;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.65);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.overlay h1 {
+    font-size: 3.2rem;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin: 12px 0;
+}
+
+.details {
+    margin-top: 12px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.section.alt {
+    background: #e8dfd3;
+}
+
+.section h2 {
+    color: #6b3f25;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline .event {
+    margin: 18px 0;
+    font-style: italic;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 420px;          
+    object-fit: cover;     
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   HINT TEXT
+========================= */
+.hint {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   VIDEOS
+========================= */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 950px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ✅ Rotate documentary2 90 degrees clockwise */
+#documentary2 {
+    transform: rotate(90deg);
+    max-width: 600px;   /* adjust width after rotation */
+    aspect-ratio: 9/16; /* maintain rotated aspect ratio */
+    object-fit: cover;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #6b3f25;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* =========================
+   RESPONSIVE (TABLET)
+========================= */
+@media (max-width: 900px) {
+    .overlay h1 {
+        font-size: 2.6rem;
+    }
+
+    .overlay p {
+        font-size: 1.3rem;
+    }
+
+    .gallery img {
+        height: 360px;
+    }
+
+    #documentary2 {
+        max-width: 400px;
+    }
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 300px;
+    }
+
+    #documentary2 {
+        max-width: 300px;
+    }
+}
